@@ -27,28 +27,28 @@
               <li>
                   <%= link_to destroy_user_session_path, class: 'nav-link text-light' do %>
                     <i class="fas fa-home"></i>
-                    "Home"
+                    Home
                   <% end %>
               </li>
 
                <li>
                   <%= link_to destroy_user_session_path, class: 'nav-link text-light' do %>
                     <i class="fas fa-book-open"></i>
-                    "Books"
+                    Books
                   <% end %>
               </li>
 
                <li>
                   <%= link_to root_path, class: 'nav-link text-light' do %>
                     <i class="fas fa-users"></i>
-                    "User"
+                    User
                   <% end %>
               </li>
 
               <li>
                   <%= link_to destroy_user_session_path, class: 'nav-link text-light' do %>
                     <i class="fas fa-sign-out-alt"></i>
-                    "Log out"
+                    Log out
                   <% end %>
               </li>
 
@@ -56,28 +56,28 @@
                  <li>
                 <%= link_to root_path, class: 'nav-link text-light' do %>
                   <i class="fas fa-home"></i>
-                  "Home"
+                  Home
                 <% end %>
               </li>
 
               <li>
                 <%= link_to about_path, class: 'nav-link text-light' do %>
                   <i class="fas fa-link"></i>
-                  "About"
+                  About
                 <% end %>
               </li>
 
               <li>
                 <%= link_to new_user_registration_path, class: 'nav-link text-light' do %>
                   <i class="fas fa-user-plus"></i>
-                  "Sign up"
+                  Sign up
                 <% end %>
               </li>
 
               <li>
                 <%= link_to new_user_session_path, class: 'nav-link text-light' do %>
                   <i class="fas fa-sign-in-alt"></i>
-                  "Log in"
+                  Log in
                 <% end %>
               </li>
               <% end %>
@@ -87,7 +87,10 @@
       </nav>
     </header>
 
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+
     <footer>
       <div class="container mt-5">
         <div class="row">
