@@ -1,1 +1,35 @@
-<%= render 'template.html.erb', books: @book %>
+<%= render 'template', user: @user, newbook: @newbook %>
+<div class="col-md-8 offset-md-1">
+ <h2>Book detail</h2>
+ <table class="table">
+  <tbody>
+   <tr>
+    <td>
+     <%= link_to user_path(@user.id) do %>
+      <%= image_tag @user.get_image(100, 100) %>
+      <br>
+      <%= @user.name %>
+     <% end %>
+    </td>
+
+    <td>
+     <%= link_to book_path(@book.id) do %>
+      <%= @book.title %>
+     <% end %>
+    </td>
+
+    <td><%= @book.body %></td>
+
+    <% if @user == current_user %>
+    <td>
+     <%= link_to "Edit", edit_book_path(@book), class: 'btn btn-sm btn-success edit_book_42957' %>
+    </td>
+
+    <td>
+      <%= link_to "Destroy", books_path, class: 'btn btn-sm btn-danger destory_book_42965', method: :delete, "data-confirm" => "本当に削除しますか？" %>
+    </td>
+    <% end %>
+   </tr>
+  </tbody>
+ </table>
+</div>
