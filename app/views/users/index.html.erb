@@ -1,6 +1,6 @@
-<%= render 'template2', book: @book, newuser: @newuser %>
+<%= render 'books/template', user: @user, newbook: @newbook %>
 <div class="col-md-8 offset-md-1">
-  <h2>Books</h2>
+  <h2>Users</h2>
   <table class="table">
     <thead>
       <tr>
@@ -10,21 +10,22 @@
       </tr>
     </thead>
 
-    <% @newuser.each do |newuser| %>
+    <% @users.each do |user| %>
       <tbody>
         <tr>
           <td>
-            <%= image_tag newuser.get_image(80, 80) %>
+            <%= image_tag user.get_image(80, 80) %>
           </td>
 
-          <td><%= newuser.name %></td>
+          <td><%= user.name %></td>
 
           <td>
-            <%= link_to user_path(newuser.id) do %>
+            <%= link_to user_path(user.id) do %>
               Show
-            <%= end %>
+            <% end %>
           </td>
         </tr>
       </tbody>
+    <% end %>
   </table>
 </div>

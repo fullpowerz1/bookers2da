@@ -1,3 +1,4 @@
+<%= flash[:success] %>
 <%= render 'template', user: @user, newbook: @newbook %>
 <div class="col-md-8 offset-md-1">
  <h2>Book detail</h2>
@@ -26,7 +27,7 @@
     </td>
 
     <td>
-      <%= link_to "Destroy", books_path, class: 'btn btn-sm btn-danger destory_book_42965', method: :delete, "data-confirm" => "本当に削除しますか？" %>
+      <%= link_to "Destroy", book_path, class: 'btn btn-sm btn-danger destory_book_42965', method: :delete, "data-confirm" => "本当に削除しますか？" %>
     </td>
     <% end %>
    </tr>
