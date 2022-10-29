@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bookers2</title>
+    <title>Bookers2Ver2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -25,7 +25,7 @@
               <% if user_signed_in? %>
 
               <li>
-                  <%= link_to root_path, class: 'nav-link text-light' do %>
+                  <%= link_to user_path(current_user.id), class: 'nav-link text-light' do %>
                     <i class="fas fa-home"></i>
                     Home
                   <% end %>
@@ -34,7 +34,7 @@
                <li>
                   <%= link_to users_path, class: 'nav-link text-light' do %>
                     <i class="fas fa-users"></i>
-                    User
+                    Users
                   <% end %>
               </li>
 
