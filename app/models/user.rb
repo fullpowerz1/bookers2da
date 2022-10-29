@@ -8,8 +8,8 @@ class User < ApplicationRecord
 
   has_one_attached :image
 
-  validates :title, presence: true
-  validates :body, presence: true
+  validates :name, uniqueness: true, length: { in: 2..20 }
+  validates :introduction, length: { maximum: 50 }
 
   def get_image(width, height)
     pp image.attached?
